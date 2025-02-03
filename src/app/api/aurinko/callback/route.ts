@@ -28,6 +28,7 @@ export async function GET(req: NextRequest) {
     await db.account.upsert({
         where: {
             id: tokenResponse.accountId.toString()
+            // emailAddress: accountDetails.email
         },
         update: {
             accessToken: tokenResponse.accessToken

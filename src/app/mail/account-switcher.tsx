@@ -15,13 +15,11 @@ type Props = {
 const AccountSwitcher = ({ isCollapsed }: Props) => {
   const { data: accounts } = api.account.getAccounts.useQuery()
   const [ accountId, setAccountId ] = useLocalStorage<string>('vortexAccountId', '');
+  
+  if (!accounts) return null;
 
   return (
     <>
-      {/* {accounts?.map((account) => { 
-        return <div key={account.id}>{account.emailAddress}</div>
-      })} */}
-
       <Select defaultValue={accountId} onValueChange={
         (value) => {
           setAccountId(value);
