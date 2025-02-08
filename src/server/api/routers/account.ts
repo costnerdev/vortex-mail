@@ -82,6 +82,8 @@ export const accountRouter = createTRPCRouter({
         equals: input.done
       };
 
+      filter.accountId = input.accountId;
+
       return await ctx.db.thread.findMany({
         where: filter,
         include: {
