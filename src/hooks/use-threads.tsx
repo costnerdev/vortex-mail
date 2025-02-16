@@ -13,7 +13,9 @@ const useThreads = () => {
   const [done] = useLocalStorage("vortexDone", false);
   const [threadId, setThreadId] = useAtom(threadAtom);
 
-  const { data: threads, isFetching, isFetched } = api.account.getThread.useQuery({
+  const { data: accounts } = api.account.getAccounts.useQuery()
+
+  const { data: threads, isFetching, isFetched } = api.account.getThreads.useQuery({
     accountId,
     tab,
     done
@@ -25,6 +27,7 @@ const useThreads = () => {
     threads,
     isFetching,
     isFetched,
+    account: accounts?.find((account) => account.id == accountId),
     accountId,
     threadId,
     setThreadId

@@ -9,6 +9,7 @@ import { Separator } from '@/components/ui/separator'
 import AccountSwitcher from './account-switcher'
 import Sidebar from './sidebar'
 import ThreadList from './thread-list'
+import ThreadDisplay from './thread-display'
 
 type Props = {
     defaultLayout: number[] | undefined,
@@ -77,7 +78,7 @@ const Mail = ({ defaultLayout = [20, 32, 48], navCollapsedSize, defaultCollapsib
                 </ResizablePanel>
                 <ResizableHandle withHandle />
                 <ResizablePanel defaultSize={defaultLayout[2]} minSize={48}>
-                    thread display
+                    <ThreadDisplay />
                 </ResizablePanel>
             </ResizablePanelGroup>
         </TooltipProvider>

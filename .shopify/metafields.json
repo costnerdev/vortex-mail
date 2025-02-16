@@ -1,0 +1,47 @@
+{
+  "article": [],
+  "blog": [],
+  "brand": [],
+  "collection": [
+    {
+      "key": "collections",
+      "namespace": "ecomposer",
+      "name": "Define sub collections for current collection",
+      "description": "Set the sub collection for curernt collection.",
+      "type": {
+        "name": "list.collection_reference",
+        "category": "REFERENCE"
+      }
+    }
+  ],
+  "company": [],
+  "company_location": [],
+  "location": [],
+  "market": [],
+  "order": [],
+  "page": [],
+  "product": [
+    {
+      "key": "countdown",
+      "namespace": "ecomposer",
+      "name": "EComposer product countdown end at",
+      "description": "Set date and time countdown end at",
+      "type": {
+        "name": "date_time",
+        "category": "DATE_TIME"
+      }
+    },
+    {
+      "key": "countdown_from",
+      "namespace": "ecomposer",
+      "name": "EComposer product countdown start at",
+      "description": "Set date and time countdown start at",
+      "type": {
+        "name": "date_time",
+        "category": "DATE_TIME"
+      }
+    }
+  ],
+  "variant": [],
+  "shop": []
+}

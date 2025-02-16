@@ -1,7 +1,5 @@
 import useThreads from '@/hooks/use-threads'
-import { api } from '@/trpc/react'
 import React from 'react'
-import { useLocalStorage } from 'usehooks-ts'
 import { format, formatDistance, formatDistanceToNow, subDays } from 'date-fns'
 import { cn } from '@/lib/utils'
 

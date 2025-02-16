@@ -60,7 +60,7 @@ export const accountRouter = createTRPCRouter({
           }
       })
   }),
-  getThread: privateProcedure
+  getThreads: privateProcedure
     .input(z.object({
       accountId: z.string(),
       tab: z.string(),
@@ -99,7 +99,8 @@ export const accountRouter = createTRPCRouter({
               subject: true,
               sysLabels: true,
               id: true,
-              emailLabel: true
+              emailLabel: true,
+              replyTo: true
             }
           }
         },
